@@ -1,9 +1,37 @@
-<h1>안녕하세요 여기에서 글자를 세세요<h1>
+<head>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<a href="{% url 'about'%}"> ABOUNT</a>
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<form action="{% url 'result' %}">
-    <textarea clos="40" rows="10" name="fulltext"></textarea>
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<div style=" background:linear-gradient(to right, #FFEFBA, #FFFFFF)">
+<body class="text-center">
+<ol class="breadcrumb">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li class="active">[ NOW ]</li>
+</ol>
+    
     <br>
-    <input type="submit" value="count">
-</form>
+    <h1>안녕하세요 여기에서 <a>단어</a>를 세세요<h1><br>
+
+    <a href="{% url 'about'%}" class="bg-info"> ABOUT</a><br><br><br>
+
+    <form action="{% url 'result' %}">
+        <textarea clos="20" rows="5" name="fulltext"></textarea><br><br>
+        <input type="submit"  class="btn btn-info" value="count"><br><br>
+    </form>
+
+    <h4>고민이 있으신가요?</h4>
+    <h2>여기에는 <a>고민</a>을 쓰세요<h2>
+    
+    <form action="{% url 'tmi'%}">
+        <textarea clos="20" rows="5" name="tmitext"></textarea><br><br><br>
+        <input type="submit" class="btn btn-info" value="answer"></input><br><br>
+    </form>
+    
+</body>
